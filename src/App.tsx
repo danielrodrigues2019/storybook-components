@@ -1,5 +1,5 @@
 function App() {
-  return <>Olá</>
+  return <>Hello :D</>
 }
 
 export default App
