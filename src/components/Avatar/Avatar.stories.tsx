@@ -1,10 +1,15 @@
-import {  ComponentMeta, ComponentStory } from '@storybook/react'
+import { ComponentMeta, ComponentStory } from "@storybook/react"
 
-import Avatar from '.'
+import Avatar from "."
 
 export default {
-  title: 'Components/Avatar',
-  component: Avatar
-} as ComponentMeta<typeof Avatar>;
+  title: "Components/Avatar",
+  args: {
+    imageURL: "",
+  },
+  component: Avatar,
+} as ComponentMeta<typeof Avatar>
 
-export const Default: ComponentStory<typeof Avatar> = (args) => <Avatar {...args} />
+export const Default: ComponentStory<typeof Avatar> = (args) => (
+  <Avatar {...args} />
+)
