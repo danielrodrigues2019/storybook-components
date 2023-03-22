@@ -1,10 +1,20 @@
-import {  ComponentMeta, ComponentStory } from '@storybook/react'
+import { ComponentMeta, ComponentStory } from "@storybook/react"
 
-import Navbar from '.'
+import Navbar from "."
 
 export default {
-  title: 'Components/Navbar',
-  component: Navbar
-} as ComponentMeta<typeof Navbar>;
+  title: "Components/Navbar",
+  args: {
+    logo: "Logo",
+    items: [
+      { href: "/", label: "Home" },
+      { href: "/", label: "About" },
+      { href: "/", label: "Contact" },
+    ],
+  },
+  component: Navbar,
+} as ComponentMeta<typeof Navbar>
 
-export const Default: ComponentStory<typeof Navbar> = (args) => <Navbar {...args} />
+export const Default: ComponentStory<typeof Navbar> = (args) => (
+  <Navbar {...args} />
+)
